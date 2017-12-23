@@ -1,4 +1,4 @@
-const cookiesCounterReducer = (state = {
+const pointsReducer = (state = {
     result: 0
 }, action) => {
     switch(action.type){
@@ -41,4 +41,4 @@ const cookiesCounterReducer = (state = {
     }
 };
 
-export default cookiesCounterReducer;
+export default pointsReducer;
