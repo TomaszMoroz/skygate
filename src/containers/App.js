@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">{this.props.points}</h1>
+          <h1 className="App-title">{this.props.points.result}</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
@@ -19,7 +19,22 @@ class App extends Component {
 }
 
 const mapStateToProps = (sate) => {
-  points: state.points
+  return {
+    points: state.points
+  };
+  
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+      displayPoints:  () => {
+        dispatch({
+          type: 'HANDLECLICK',
+          payload: 1
+        });
+      }
+  };
+
 };
 
 export default App;
