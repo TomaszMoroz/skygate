@@ -4,39 +4,41 @@ const makersReducer = (state = {
     mines: 0,
     factories: 0
 }, action) => {
-    switch(action.type){
+    switch (action.type){
        
 
         case 'GRANDMA':
             state = {
             ...state,
-            grandmas: grandmas += 1
+            grandmas: state.grandmas += 1
         };
             break;
 
         case 'FARM':
             state = {
             ...state,
-            farms: farms += 1
+            farms: state.farms += 1
         };
             break;
 
         case 'MINE':
             state = {
             ...state,
-            mines: mines += 1
+            mines: state.mines += 1
         };
             break;
 
         case 'FACTORY':
             state = {
             ...state,
-            factories: factories += 1
+            factories: state.factories += 1
         };
             break;
         
-        return state;
+        default: state = {...state};
     }
+
+    return state;
 };
 
 export default makersReducer;
