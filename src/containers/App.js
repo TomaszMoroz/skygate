@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import  Header  from '../components/Header';
+import Grandma from './Grandma';
+
 import addPoint from './cookieButton';
 import {Button} from 'react-bootstrap';
 
@@ -20,7 +22,7 @@ class App extends Component {
         </header>
         
         <div className="column left"> <Button onClick={this.props.addPoints}>click me</Button></div>
-        <div className="column center"> b  <addPoint /> c</div>
+        <div className="column center">   <Grandma /> </div>
         <div className="column right">  c  </div>
 
       </div>

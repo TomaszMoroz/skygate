@@ -10,28 +10,28 @@ const makersReducer = (state = {
         case 'GRANDMA':
             state = {
             ...state,
-            grandmas: state.grandmas += 1
+            grandmas: state.grandmas + 1
         };
             break;
 
         case 'FARM':
             state = {
             ...state,
-            farms: state.farms += 1
+            farms: state.farms + 1
         };
             break;
 
         case 'MINE':
             state = {
             ...state,
-            mines: state.mines += 1
+            mines: state.mines + 1
         };
             break;
 
         case 'FACTORY':
             state = {
             ...state,
-            factories: state.factories += 1
+            factories: state.factories + 1
         };
             break;
         

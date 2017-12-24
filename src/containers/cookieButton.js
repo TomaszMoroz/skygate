@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import  { handleClick } from '../actions/pointsActions';
-import {Button} from 'react-bootstrap'
+
 
 
 class addPoint extends Component {
