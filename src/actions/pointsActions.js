@@ -1,6 +1,6 @@
 export function handleClick(){
     return {
-        type: 'HANDLECLICK',
+        type: 'HANDLE_CLICK',
         payload: 1
     }
 }

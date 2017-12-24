@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import  Header  from '../components/Header'
+import  Header  from '../components/Header';
+import addPoint from './cookieButton';
+import {Button} from 'react-bootstrap';
 
-import logo from '../logo.svg';
-import  { handleClick } from '../actions/pointsActions'
+
+
+import  { handleClick } from '../actions/pointsActions';
 import '../App.css';
 
 class App extends Component {
@@ -12,12 +15,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           
-          <img src={logo} className="App-logo" alt="logo" />
-          <Header pass={this.props.points}/>
+       
+          <Header />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> {this.props.points} and save to reload.
-        </p>
+        
+        <div className="column left"> <Button onClick={this.props.addPoints}>click me</Button></div>
+        <div className="column center"> b  <addPoint /> c</div>
+        <div className="column right">  c  </div>
+
       </div>
     );
   }
@@ -33,7 +38,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
       addPoints: () => {
-        dispatch(handleClick)
+        dispatch(handleClick())
       
       }
   };
