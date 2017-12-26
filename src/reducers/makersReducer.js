@@ -7,28 +7,28 @@ const makersReducer = (state = {
     switch (action.type){
        
 
-        case 'GRANDMA':
+        case 'addGRANDMA':
             state = {
             ...state,
             grandmas: state.grandmas + 1
         };
             break;
 
-        case 'FARM':
+        case 'addFARM':
             state = {
             ...state,
             farms: state.farms + 1
         };
             break;
 
-        case 'MINE':
+        case 'addMINE':
             state = {
             ...state,
             mines: state.mines + 1
         };
             break;
 
-        case 'FACTORY':
+        case 'addFACTORY':
             state = {
             ...state,
             factories: state.factories + 1
