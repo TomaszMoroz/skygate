@@ -12,7 +12,7 @@ class Grandma extends Component{
 
         const click = () => {
             const target = document.getElementById('x');
-            target.addEventListener('click', alert('bum1'));
+            target.addEventListener('click', this.props.store.dispatch.addGrandma);
         };
 
         return(
