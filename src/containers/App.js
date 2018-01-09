@@ -9,6 +9,7 @@ import {Button} from 'react-bootstrap';
 
 
 import  { handleClick } from '../actions/pointsActions';
+import { grandma } from '../actions/pointsActions';
 import '../App.css';
 
 class App extends Component {

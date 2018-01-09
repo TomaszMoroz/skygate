@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { grandma } from '../actions/pointsActions';
-import { addGrandma } from '../actions/makersActions'
+import { addGrandma } from '../actions/makersActions';
 import { bindActionCreators } from 'redux';
+import { Button } from 'react-bootstrap';
 
 class Grandma extends Component{
 
@@ -10,18 +11,27 @@ class Grandma extends Component{
 
     render(){
 
-        const click = () => {
-            const target = document.getElementById('x');
-            target.addEventListener('click', this.props.store.dispatch.addGrandma);
-        };
+     const bum = () => {
+         setInterval(()=>{this.props.grandma()},1000)
+     };
+           
+      
 
         return(
-            <div className="maker grandma" id="x" onClick={click}>
+            <div className="maker grandma" id="x">
+                <Button onClick={()=> bum()} >DDD</Button>
                 {this.props.howMany.grandmas}
             </div>
+
+        
         );
+
+        
     }
 }
+
+
+
 const mapStateToProps = (state) => {
     return {
         howMany: state.makers
@@ -33,15 +43,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
    
-    
-    bindActionCreators({
-            grandma: grandma(),
-            addGrandma: addGrandma()
-              
-              
-        }, dispatch);
-    
-    
+    return {
+        grandma: () => {
+          dispatch(grandma())
+        
+        }
+    };
+  
   };
   
 export default connect(mapStateToProps ,mapDispatchToProps)(Grandma);
