@@ -12,7 +12,7 @@ class Grandma extends Component{
     render(){
 
      const bum = () => {
-         setInterval(()=>{this.props.grandma()},1000)
+         setInterval(()=>{this.props.grandma()},1000) 
      };
            
       
