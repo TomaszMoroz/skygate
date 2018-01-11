@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import  Header  from '../components/Header';
 import Grandma from './Grandma';
-import { makersCounter } from '../components/makersCounter'
+
 
 
 import {Button} from 'react-bootstrap';
@@ -25,7 +25,7 @@ class App extends Component {
         
         <div className="column left"> <Button onClick={this.props.addPoints}>click me</Button></div>
         <div className="column center">   <Grandma /> </div>
-        <div className="column right">  123123123 </div>
+        <div className="column right">  ilosc babc: {this.props.grandmas} </div>
 
       </div>
     );

@@ -12,14 +12,15 @@ class Grandma extends Component{
     render(){
 
      const bum = () => {
-         setInterval(()=>{this.props.grandma()},1000) 
+         setInterval(()=>{this.props.grandma()},1000);
+         this.props.addGrandma(); 
      };
            
       
 
         return(
             <div className="maker grandma" id="x">
-                <Button onClick={()=> bum()} >DDD</Button>
+                <Button onClick={()=> bum()} >DD</Button>
                 {this.props.howMany.grandmas}
             </div>
 
@@ -47,6 +48,9 @@ const mapDispatchToProps = (dispatch) => {
         grandma: () => {
           dispatch(grandma())
         
+        },
+        addGrandma: () => {
+            dispatch(addGrandma())
         }
     };
   
